@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Coin from './Coin';
-import './styles/App.css';
 
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=sek&order=market_cap_desc&per_page=100&page=1&sparkline=false
 
@@ -11,7 +10,7 @@ function App() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=sek&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
       .then((res) => {
         setCoins(res.data);
         console.log(res.data);
@@ -23,7 +22,9 @@ function App() {
     const foo = 'bar';
   };
 
-  const filteredCoins = coins.filter((coin) => coin.name.toLowerCase().includes(search.toLowerCase()));
+  const filteredCoins = coins
+    .filter((coin) => coin.name.toLowerCase()
+      .includes(search.toLowerCase()));
 
   return (
     <div className="coin-app">
