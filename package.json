@@ -73,8 +73,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -94,6 +93,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "mini-css-extract-plugin": "^1.6.0",
     "sass": "^1.34.0",
     "sass-loader": "^10.2.0",
     "webpack": "^4.44.2"
