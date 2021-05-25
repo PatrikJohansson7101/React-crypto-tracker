@@ -1,7 +1,5 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-undef */
 import React from 'react';
-import './Coin.css'
+import './styles/Coin.css'
 
 const Coin = ({name, image, symbol, price, volume, priceChange, marketcap}) => {
     return (
