@@ -1,6 +1,7 @@
 {
   "name": "react-api-crypto-tracker",
   "version": "0.1.0",
+  "homepage": "https://patrikjohansson7101.github.io/React-crypto-tracker/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
